@@ -3,90 +3,244 @@
 <head>
   <meta charset="UTF-8">
   <title>Halaman Contoh</title>
+ <style>
+    .judul {
+      color: #0077be; /* biru laut */
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .tombol {
+      background-color: #add8e6; /* biru muda */
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .tombol:hover {
+      background-color: #9ecde1; /* sedikit lebih gelap saat hover */
+    }
+  </style>
 </head>
 <body>
 
   <!-- Section 1: Menu -->
-  <table border="1" width="100%">
-    <tr>
-      <td align="center"><a href="#beranda">Header</a></td>
-      <td align="center"><a href="#biodata">Biodata</a></td>
-      <td align="center"><a href="#portofolio">Portofolio</a></td>
-    </tr>
-  </table>
+  <div class="menu-bar">
+  <div class="menu-item"><a href="#beranda">Header</a></div>
+  <div class="menu-item"><a href="#biodata">Biodata</a></div>
+  <div class="menu-item"><a href="#portofolio">Portofolio</a></div>
+</div>
+
+<style>
+  .menu-bar {
+    display: flex;
+    justify-content: left;
+    background-color: #007BFF; /* biru */
+    padding: 10px 0;
+  }
+
+  .menu-item {
+    margin: 0 15px;
+  }
+
+  .menu-item a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    display: inline-block;
+  }
+
+  .menu-item a:hover {
+    background-color: #0056b3; /* biru lebih gelap saat hover */
+    border-radius: 4px;
+  }
+</style>
 
   <!-- Section 2: Judul di kiri dan gambar di kanan -->
   <a name="tentang"></a>
   <table border="1" width="100%" id="section2">
     <tr>
       <td width="50%">
-        <h2>Selamat Datang di Website Saya</h2>
+        <h2><p class="judul">Selamat Datang di Website Saya</p></h2>
         <p>Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks seperti ini.</p>
-		<button> pelajari lebih lanjut </button>
+		<button class="tombol">pelajari lebih lanjut </button>
       </td>
       <td width="50%">
-        <img src="https://via.placeholder.com/200" alt="Contoh Gambar">
+		  <style>
+    /* CSS langsung di dalam HTML */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+
+    .image-container {
+      padding: 20px;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px; /* opsional untuk tampilan lebih lembut */
+    }
+  </style>
+		  <div class="image-container">
+        <img src="https://watermark.lovepik.com/photo/20211119/large/lovepik-a-business-man-who-collate-a-suit-tie-picture_500347070.jpg" alt="Contoh Gambar">
+			   </div>
       </td>
     </tr>
   </table>
 
   <!-- Section 3: Biodata 6 box -->
   <a name="biodata"></a>
-   <table border="1" width="100%" id="section3">
-   <tr> 
-		<td colspan="3" align="center"> 
-		<h2> About me </h2>
-		<p> Abrief intruduction about myself</p>
-		</td>
-	</tr>
-    <tr>
-      <td align="center">Full name</td>
-      <td align="center">Education</td>
-      <td align="center">Pekerjaan</td>
-    </tr>
-    <tr>
-      <td align="center">Contact</td>
-      <td align="center">Hobby</td>
-      <td align="center">Alamat</td>
-    </tr>
-  </table>
+
+<div id="section3" class="biodata-section">
+  <div class="biodata-header">
+    <h2><p class="judul">About me</p></h2>
+    <p>A brief introduction about myself</p>
+  </div>
+
+  <div class="biodata-row">
+    <div class="biodata-cell">Full name</div>
+    <div class="biodata-cell">Education</div>
+    <div class="biodata-cell">Pekerjaan</div>
+  </div>
+
+  <div class="biodata-row">
+    <div class="biodata-cell">Contact</div>
+    <div class="biodata-cell">Hobby</div>
+    <div class="biodata-cell">Alamat</div>
+  </div>
+</div>
+
+<style>
+  .biodata-section {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+  }
+
+  .biodata-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .biodata-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .biodata-cell {
+    flex: 2 1 30%;
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    border-radius: 40px;
+    background-color: #fdfdfd;
+    min-width: 150px;
+  }
+
+  @media (max-width: 600px) {
+    .biodata-cell {
+      flex: 1 1 100%;
+    }
+  }
+</style>
 
   <!-- Section 4: Portofolio -->
   <a name="portofolio"></a>
+
+<div id="section4" class="portfolio-section">
+  <div class="portfolio-header">
+    <h2><p class="judul">Portofolio</p></h2>
+  </div>
+
+  <div class="portfolio-grid">
+    <div class="portfolio-item">
+      <div class="image-container">
+        <img src="https://watermark.lovepik.com/photo/20211119/large/lovepik-a-business-man-who-collate-a-suit-tie-picture_500347070.jpg" alt="Contoh Gambar">
+			   </div>
+      <h3><p class="judul">Proyek 1</p></h3>
+      <p>Deskripsi</p>
+    </div>
+    <div class="portfolio-item">
+      <div class="image-container">
+        <img src="https://watermark.lovepik.com/photo/20211119/large/lovepik-a-business-man-who-collate-a-suit-tie-picture_500347070.jpg" alt="Contoh Gambar">
+			   </div>
+      <h3><p class="judul">Proyek 2</p></h3>
+      <p>Deskripsi</p>
+    </div>
+    <div class="portfolio-item">
+      <div class="image-container">
+        <img src="https://watermark.lovepik.com/photo/20211119/large/lovepik-a-business-man-who-collate-a-suit-tie-picture_500347070.jpg" alt="Contoh Gambar">
+			   </div>
+      <h3><p class="judul">Proyek 3</p></h3>
+      <p>Deskripsi</p>
+    </div>
+    <div class="portfolio-item">
+      <div class="image-container">
+        <img src="https://watermark.lovepik.com/photo/20211119/large/lovepik-a-business-man-who-collate-a-suit-tie-picture_500347070.jpg" alt="Contoh Gambar">
+			   </div>
+      <h3><p class="judul">Proyek 4</p></h3>
+      <p>Deskripsi</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .portfolio-section {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .portfolio-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .portfolio-item {
+    width: 200px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+
+  .portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  @media (max-width: 600px) {
+    .portfolio-item {
+      width: 100%;
+    }
+  }
+</style>
+	  
+   
   
-  <table border="1" width="100%"id="section4">
-  <tr>
-		<td colspan="3" align="center"> 
-		<h2>Portofolio</h2>
-		</td>
-  </tr>
-    <tr>
-	<tr>
-		<td align="center" valign="top"> 
-		 <img src="https://via.placeholder.com/200" alt="Contoh Gambar">
-		  <h3>Proyek 1</h3>
-		  <p>Deskripsi</p>
-		  </td>
-		<td align="center" valign="top">
-		 <img src="https://via.placeholder.com/200" alt="Contoh Gambar">
-		  <h3>Proyek 2</h3>
-		  <p>Deskripsi</p>
-		  </td>
-	 </tr>
-	 <tr>
-		<td align="center" valign="top">
-		 <img src="https://via.placeholder.com/200" alt="Contoh Gambar">
-		  <h3>Proyek 3</h3>
-		  <p>Deskripsi</p>
-		  </td>
-		 <td align="center" valign="top">
-		 <img src="https://via.placeholder.com/200" alt="Contoh Gambar">
-		  <h3>Proyek 4</h3>
-		  <p>Deskripsi</p>
-		  </td>
-	  </tr>
-    </tr>
-  </table>
+
 
 </body>
 </html>
