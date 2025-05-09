@@ -1,4 +1,16 @@
+<p id="p1"> ini adalah paragraf</p>
+<input type="text" id="input1" name="input1">
+<button onclick="validateName()" type="submit">Submit</button>
 <script>
+    function validateName() {
+        let name = document.getElementById("input1").value;
+        if (name == "") {
+            alert("nama tidak boleh kosong");
+            return false;
+        }
+        return true;
+    }
+    document.getElementById('p1').innerHTML = "ini adalah paragraf yang ke dua";
     //aku komentar sebentar satu baris
     /*komentar banyak baris
     ya kan*/
