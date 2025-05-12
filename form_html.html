@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Kontak Sederhana</title>
+</head>
+<body>
+    <h1>FORMULIR HTML</h1>
+    <form action="process.php" method="POST">
+        <label for="name">Nama:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="harga">Harga:</label><br>
+        <input type="number" id="harga" name="harga" required><br><br>
+
+        <label for="deskripsi">Pesan:</label><br>
+        <textarea id="deskripsi" name="deskripsi" rows="5" cols="30" required></textarea><br><br>
+
+        <button type="submit">Kirim</button>
+    </form>
+</body>
+</html>
